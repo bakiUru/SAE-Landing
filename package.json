@@ -16,7 +16,7 @@
   "version": "1.0.0",
   "main": "serverexpress.js",
   "scripts": {
-    "start": "node serverexpress.js"
+    "start": "node serverexpress.js",
     "dev": "nodemon serverexpress.js"
   },
   "keywords": [],

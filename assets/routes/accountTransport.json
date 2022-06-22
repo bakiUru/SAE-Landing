@@ -1,0 +1,11 @@
+{
+    "service": "gmail",
+    "auth":{
+        "type": "OAuth2",
+        "user": "riego.sae@gmail.com",
+        "clientId": "919429922418-2ku1ks3l40bl7udn2ikqea8r00c44th2.apps.googleusercontent.com",
+        "clientSecret": "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",
+        "refreshToken": "1//04j1U-OHg14SfCgYIARAAGAQSNwF-L9IrsVjz_VaSAUb3XD9Mgcotq1iCPHuYM5D-e922HQwltKvX88lS8Q_X0l8ENWFVDGwN0qM"
+    }
+    
+}

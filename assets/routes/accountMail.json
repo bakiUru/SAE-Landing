@@ -1,0 +1,12 @@
+{ 
+    "host": "smtp.hostinger.com",
+    "port": 465,
+    "secure": true,
+    "auth": {
+      "user": "contacto@saeriego.tech",
+      "pass": "Saeriego2022@"
+    },
+    "tls": {
+      "rejectUnauthorized": false
+    }
+}

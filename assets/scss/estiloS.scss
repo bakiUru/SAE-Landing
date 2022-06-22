@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+
+
+h1 {
+  font-size: 2.2em;
+}
+
+// base
+.flip {
+    position: relative;
+    >.front,
+    >.back {
+        display: block;
+        transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
+        transition-duration: 1.5s;
+        transition-property: transform, opacity;
+    }
+    >.front {
+        transform: rotateY(0deg);
+    }
+    >.back {
+        position: absolute;
+        opacity: 0;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        transform: rotateY(-180deg);
+    }
+    &:hover {
+        >.front {
+            transform: rotateY(180deg);
+        }
+        >.back {
+            opacity: 1;
+            transform: rotateY(0deg);
+        }
+    }
+    &.flip-vertical {
+        >.back {
+            transform: rotateX(-180deg);
+        }
+        &:hover {
+            >.front {
+                transform: rotateX(180deg);
+            }
+            >.back {
+                transform: rotateX(0deg);
+            }
+        }
+    }
+}
+
+// custom
+.flip {
+    position: relative;
+    display: inline-block;
+    margin-right: 2px;
+    margin-bottom: 1em;
+    width: 400px;
+    >.front,
+    >.back {
+      display: block;
+      color: white;
+      width: inherit;
+      background-size: cover!important;
+      background-position: center!important;
+      height: 220px;
+      padding: 1em 2em;
+      background: #313131;
+      border-radius: 10px;
+      p {
+        font-size: 2.2rem;
+        line-height: 160%;
+        color: #999;
+      }
+    }
+}
+
+.text-shadow {
+text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04), 3px 3px rgba(0, 0, 0, 0.04), 4px 4px rgba(0, 0, 0, 0.04), 0.125rem 0.125rem rgba(0, 0, 0, 0.04), 6px 6px rgba(0, 0, 0, 0.04), 7px 7px rgba(0, 0, 0, 0.04), 8px 8px rgba(0, 0, 0, 0.04), 9px 9px rgba(0, 0, 0, 0.04), 0.3125rem 0.3125rem rgba(0, 0, 0, 0.04), 11px 11px rgba(0, 0, 0, 0.04), 12px 12px rgba(0, 0, 0, 0.04), 13px 13px rgba(0, 0, 0, 0.04), 14px 14px rgba(0, 0, 0, 0.04), 0.625rem 0.625rem rgba(0, 0, 0, 0.04), 16px 16px rgba(0, 0, 0, 0.04), 17px 17px rgba(0, 0, 0, 0.04), 18px 18px rgba(0, 0, 0, 0.04), 19px 19px rgba(0, 0, 0, 0.04), 1.25rem 1.25rem rgba(0, 0, 0, 0.04);
+}
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap');
+
+$all: all .5s ease;
+$sai: 'Saira Semi Condensed', sans-serif;
+
+*{
+    @include tf($tf-fm: $sai);
+    @include other($ot-tsi: $all)
+}
+
+body{
+    background: #dfdfdf
+}
+
+.container{
+    @include bm(100%, 100%, $bm-pd: 0 16px, $bm-dp: $fl);
+    @include flex-center($rnw)
+}
+
+form{
+    @include bm(400px, $bm-dp: $fl);
+    @include flex-center($cw);
+        div, label, input, textarea{
+            @include bm(100%)
+        }
+}
+
+.field:nth-of-type(2){
+    @include bm($bm-mg: 16px 0)
+}
+
+label, input, textarea{
+    @include bm($bm-pd: 8px)
+}
+
+label, [placeholder]{
+    @include tf(#555)
+}
+
+label i{
+    @include bm($bm-mg: 0 10px 0 0)
+}
+
+.field:focus-within label{
+    @include tf(#000, $tf-ls: 2px)
+}
+
+input, textarea{
+    background: rgba(255,255,255,.5);
+    border: none;
+    @include other($ot-br: 4px, $ot-bs: $o-b);
+        &:focus{
+            background: rgba(255,255,255,1);
+            @include other($ot-bs: none)
+        }
+}
+
+textarea{
+    resize: none;
+        &::-webkit-scrollbar{
+            @include bm(0)
+        }
+}
+
+button{
+    background: #2f4ad0;
+    @include bm($bm-pd: 8px 16px, $bm-mg: 16px 0 50px 0);
+    @include tf(#fff);
+    border: none;
+    @include other($ot-br: 4px, $ot-cr: pointer, $ot-bs: $o-b);
+        &:hover{
+            @include tf($tf-ls: 2px);
+            @include other($ot-bs: none)
+        }
+}
+
+.social-media{
+    @include bm($bm-dp: $fl);
+    @include fb($rw, $fb-jc: $sa);
+        :not(&){
+            @include tf($tf-fs: 14px)
+        }
+        span{
+            @include tf($tf-fs: 16px)
+        }
+        span .fas{
+            @include bm($bm-mg: 0 0 0 10px)
+        }
+        a{
+            @include tf(#000, $tf-fs: 20px)
+        }
+}
+
+@media (max-width: 425px){
+    form{
+        @include bm(100%)
+    }
+}

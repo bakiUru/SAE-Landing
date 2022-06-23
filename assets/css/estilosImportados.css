@@ -199,8 +199,8 @@ h1 {
   .container{
     width:auto;
   }
-.blockquote {
-  font-size: 1.7em;
+blockquote {
+  font-size: 1.7em !important;
 
 }
 
@@ -208,20 +208,22 @@ h1 {
   text-shadow: 1px 0px 0px #000;
   font-size: 18px;
 }
-  
+
 }
 
+
 @media only screen and (min-width: 350px) and (max-width: 475px ){
+
 body{
-  width: 94vh;
+  width: 54vh;
 }
-.blockquote {
-  font-size: 1.3em;
+blockquote {
+  font-size: 1.3em !important;
 }
 
 .fraseDestacada{
-  text-shadow: 1px 0px 0px #000;
-  font-size: 16px;
+  text-shadow: 1px 0px 0px #000 !important;
+  font-size: 12px !important;
 }
 .parallax-container{
   height: 255px;
@@ -231,6 +233,13 @@ body{
   margin-left: 2.25rem;
   margin-right: 2.25rem;
 }
+
+#checkCaja1{
+  text-align: justify;
+  width: 70%;
+  margin: 10px;
+}
+
 }
 
 .u-center-text {
@@ -248,6 +257,7 @@ body{
   .u-margin-top-big {
     margin-top: 5rem !important;
   }
+ 
   
   body {
     font-family: "Lato", sans-serif;
@@ -315,7 +325,7 @@ body{
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
     position: relative;
-    font-size: 1.6rem;
+    font-size: 1.9rem;
     border: none;
     cursor: pointer;
   }

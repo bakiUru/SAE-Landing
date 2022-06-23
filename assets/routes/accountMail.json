@@ -1,5 +1,5 @@
 { 
-    "host": "smtp.hostinger.com",
+    "host": "mail.saeriego.tech",
     "port": 465,
     "secure": true,
     "auth": {

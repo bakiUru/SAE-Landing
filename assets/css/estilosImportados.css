@@ -66,9 +66,10 @@ transition: all 0.5s ease;
 }
 
 .formularioContacto textarea{
-  color: #080866 !important;
+  color: #d6d6d8 !important;
   font-style: oblique;
-  text-shadow: 1px 1px black;
+  text-shadow: 1px 2px black;
+  resize: none;
 }
 
 
@@ -230,10 +231,20 @@ blockquote {
 }
 
 .planes {
-  margin-left: 2.25rem;
-  margin-right: 2.25rem;
-}
+  display: grid;
+  grid-template-rows: repeat(3, 550px);
+  grid-gap: 10px;
+  grid-auto-flow: column;
+  grid-auto-columns: 950px 100px;
 
+}
+.col.s4.m4 p{
+  font-size: 1.3rem;
+}
+.textoExtraFooter{
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
 #checkCaja1{
   text-align: justify;
   width: 70%;
@@ -775,6 +786,6 @@ cite {
 }
 
 .planes{
-  margin-left: 10.25rem;
-  margin-right: -0.75rem;
+  margin-left: 6.75rem;
+  margin-right: 6.75rem;
 }

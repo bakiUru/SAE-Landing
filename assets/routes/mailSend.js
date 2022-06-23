@@ -1,7 +1,6 @@
 const { Router } = require("express");
 const nodemailer = require("nodemailer");
 const router = Router();
-const emailRiego = "contacto@saeriego.tech";
 const emailriegoGmail = "riego.sae@gmail.com";
 const handlebars = require("nodemailer-express-handlebars");
 const path = require("path");
@@ -9,6 +8,7 @@ const { google } = require("googleapis");
 const OAuth2 = google.auth.OAuth2;
 const accountTransport = require("./accountTransport.json");
 const accountMail = require("./accountMail.json");
+
 
 async function authMailClient() {
   try {
@@ -41,8 +41,8 @@ router.post("/sendEmail", async (req, res) => {
   const { nombreContacto, emailContacto, checkAsunto, consulContacto } =
     req.body;
   
-    //m,anejo de asunto vacio
-    if (checkAsunto == "")
+    //manejo de asunto vacio
+    if (checkAsunto == undefined)
         checkAsunto= "Sin Area de Interes";
   
   if (nombreContacto !== "" && emailContacto !== "" && consulContacto !== "") {
@@ -56,7 +56,7 @@ router.post("/sendEmail", async (req, res) => {
     `;
     //Objeto de envio Equipo
     let mensajeEquipo = {
-      from: `Desde WEB SAE Riego - CONSULTA ${emailRiego}`,
+      from: `Desde WEB SAE Riego - CONSULTA ${accountMail.auth.user}`,
       to: emailriegoGmail,
       subject: `${checkAsunto}`,
       html: `<h1>Consulta de ${nombreContacto},</h1> 
@@ -67,7 +67,7 @@ router.post("/sendEmail", async (req, res) => {
 
     //Objeto de envio Cliente
     let mensajeCliente = {
-      from: `SAE Riego ${emailRiego}`,
+      from: `SAE Riego ${accountMail.auth.user}`,
       to: `${emailContacto}`,
       subject: `Consulta exitosa`,
       template: "undefined",

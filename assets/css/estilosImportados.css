@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-input {
-  display: block;
-  width: 100%;
-}
 
 .titulo{
   text-align: left;

@@ -166,6 +166,14 @@ h1 {
     
 }
 
+@media only screen and (max-width: 1212px)  {
+  .right.hide-on-med-and-down{
+    display: none;
+  }
+}
+
+
+
 @media only screen and (min-width: 475px) and (max-width: 820px )  {
     body{
         margin: 0px auto;
@@ -250,6 +258,10 @@ blockquote {
   width: 70%;
   margin: 10px;
 }
+
+}
+
+@media only screen and (min-width: 350px) and (max-width: 475px ){
 
 }
 

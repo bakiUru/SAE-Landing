@@ -41,9 +41,7 @@ router.post("/sendEmail", async (req, res) => {
   const { nombreContacto, emailContacto, checkAsunto, consulContacto } =
     req.body;
   
-    //manejo de asunto vacio
-    if (checkAsunto == undefined)
-        checkAsunto= "Sin Area de Interes";
+
   
   if (nombreContacto !== "" && emailContacto !== "" && consulContacto !== "") {
     ContentHTML = `<h1> Datos de Correo</h1>

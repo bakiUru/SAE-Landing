@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
 @import url('https://fonts.googleapis.com/css?family=Exo+2');
+* {
+  box-sizing: border-box;
+}
+
+input {
+  display: block;
+  width: 100%;
+}
 
 .titulo{
   text-align: left;

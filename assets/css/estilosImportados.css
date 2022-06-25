@@ -586,7 +586,7 @@ blockquote {
   
   .row {
     max-width: 114rem;
-    margin: 0 auto;
+    margin: auto;
   }
   
   .row:not(:last-child) {

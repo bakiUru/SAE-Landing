@@ -87,7 +87,7 @@ document.getElementsByClassName('box a4')[0].addEventListener('click', function 
     Swal.fire({
         title: 'AutoCultivo Cannabico',
         html: ' <div class="modal-content"></div>' +
-            ' <h5 style="color: yellow;text-shadow: 1px 0px 18px rgb(255 255 255);"><b>¡ACTUALEMNTE EN DESARROLLO!</b></h5>',
+            ' <h5 style="color: yellow;text-shadow: 1px 0px 18px rgb(255 255 255);"><b>¡ACTUALMENTE EN DESARROLLO!</b></h5>',
         width: 600,
         padding: '3em',
         color: '#716add',

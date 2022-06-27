@@ -787,8 +787,8 @@ cite {
 
 
 .swal2-title{
-    color:#2f4ad0 !important;
-    text-shadow: 1px 1px 0.5px #000;
+    color:#002bff !important;
+    text-shadow: 1px 1px 0.5px rgb(255, 255, 255);
     font-size: 3em;
     width: auto;
     filter: grayscale(35%);

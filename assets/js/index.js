@@ -33,9 +33,9 @@ window.addEventListener('scroll',mostarAnimacion);
 //mensajes en Areas
 document.getElementsByClassName('box a1')[0].addEventListener('click', function (event) {
     Swal.fire({
-        title: 'Ventajas en Tus Jardines',
+        title: 'Ventajas en Jardines',
         html: ' <div class="modal-content"></div>' +
-            ' <h4 style="color: #000000;text-shadow: 2px 2px rgb(255 255 255 / 68%)"><b>.Control en Tiempo de Riego <br>.Control en el Volumen de Agua<br>.Apagado y encendido Automatico<br>.Menos Consumo de Energía</b><b><br>.Ahorro en Costos</b></h4>',
+            ' <h4 style="color: #000000;text-shadow: 1px 0px 18px rgb(255 255 255);"><b>.Control en Tiempo de Riego <br>.Control en el Volumen de Agua<br>.Apagado y encendido Automatico<br>.Menos Consumo de Energía</b><b><br>.Ahorro en Costos</b></h4>',
         width: 600,
         padding: '3em',
         color: '#716add',
@@ -51,9 +51,9 @@ document.getElementsByClassName('box a1')[0].addEventListener('click', function 
 
 document.getElementsByClassName('box a2')[0].addEventListener('click', function (event) {
     Swal.fire({
-        title: 'Ventajas en Tus Complejos Deportivos',
+        title: 'Ventajas en Complejos Deportivos',
         html: ' <div class="modal-content"></div>' +
-            ' <h4 style="color: #000000;text-shadow: 2px 2px rgb(255 255 255 / 68%)"><b>.Control de Bombeo <br>.Control en el Volumen de Agua<br>.Apagado y encendido de Bombas<br>.Control de Presión</b><b><br>.Sensores Nivel de Tanque</b></h4>',
+            ' <h4 style="color: #000000;text-shadow: 1px 0px 18px rgb(255 255 255);"><b>.Control de Bombeo <br>.Control en el Volumen de Agua<br>.Apagado y encendido de Bombas<br>.Control de Presión</b><b><br>.Sensores Nivel de Tanque</b></h4>',
         width: 600,
         padding: '3em',
         color: '#716add',
@@ -71,7 +71,7 @@ document.getElementsByClassName('box a3')[0].addEventListener('click', function 
     Swal.fire({
         title: 'Ventajas en Tus Cultivos',
         html: ' <div class="modal-content"></div>' +
-            ' <h4 style=" color: #000000;text-shadow: 2px 2px rgb(255 255 255 / 68%)"><b>.Control Humedad Tierra <br>.Control PH del Agua<br>.Apagado y encendido de Bombas<br>.Utilización de Paneles Solares</b><b><br>.Control Tiempo de Riego</b></h4>',
+            ' <h4 style=" color: #000000;text-shadow: 1px 0px 18px rgb(255 255 255);"><b>.Control Humedad Tierra <br>.Control PH del Agua<br>.Apagado y encendido de Bombas<br>.Utilización de Paneles Solares</b><b><br>.Control Tiempo de Riego</b></h4>',
         width: 600,
         padding: '3em',
         color: '#716add',
@@ -87,7 +87,7 @@ document.getElementsByClassName('box a4')[0].addEventListener('click', function 
     Swal.fire({
         title: 'AutoCultivo Cannabico',
         html: ' <div class="modal-content"></div>' +
-            ' <h5 style="color: yellow;text-shadow: 2px 1px rgba(0, 0, 0, 0.14)"><b>¡EN DESARROLLO!</b></h5>',
+            ' <h5 style="color: yellow;text-shadow: 1px 0px 18px rgb(255 255 255);"><b>¡ACTUALEMNTE EN DESARROLLO!</b></h5>',
         width: 600,
         padding: '3em',
         color: '#716add',

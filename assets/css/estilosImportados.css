@@ -182,6 +182,7 @@ h1 {
     body{
         margin: 0px auto;
         height: 100%;
+        width: 100vw;
     }
     .accordion {
         flex-direction: column;
@@ -229,6 +230,8 @@ blockquote {
 
 body{
   width: 54vh;
+  width: 100vw;
+
 }
 blockquote {
   font-size: 1.3em !important;
@@ -296,6 +299,7 @@ blockquote {
     background: #272c44;
     margin: auto 0px;
     text-align: center;
+    
   }
   
   .heading-primary {

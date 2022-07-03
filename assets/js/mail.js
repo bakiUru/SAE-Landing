@@ -1,6 +1,5 @@
-
-
 const form = document.getElementById('formContacto');
+const btnEnviar = document.getElementById('btnEnviar');
 
 //capturamos inputs del form
 const inputs = document.querySelectorAll('#formContacto input');
@@ -57,6 +56,7 @@ inputs.forEach((input) => {
     });
 
 });
+ 
 
 //evento SUBMIT
 form.addEventListener('submit', (event) => {
@@ -75,6 +75,9 @@ form.addEventListener('submit', (event) => {
     if (camposOK.nombre && camposOK.correo && camposOK.msg) {
         //SI todo esta OK
         renderAlert();
+               //Desactivo boton enviar
+               btnEnviar.disabled = true;
+               btnEnviar.innerText = "Enviando...";
         setTimeout(() => {
             form.submit();
             enviarMail();

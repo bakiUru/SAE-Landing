@@ -89,7 +89,13 @@ form.addEventListener('submit', (event) => {
                 title: '¡Nombre Vacío!',
             });
             camposOK.nombre = null;
-         } if (camposOK.nombre == false) {
+         }else {
+            camposOK.nombre = true;
+
+        }
+         
+         
+         if (camposOK.nombre == false) {
                 Swal.fire({
                     icon: 'error',
                     title: '¡Nombre Erroneo!',
@@ -101,7 +107,11 @@ form.addEventListener('submit', (event) => {
                 title: '¡Correo Vacío!',
             });
             camposOK.correo = null;
-        }    if (camposOK.correo == false) {
+        }else {
+            camposOK.correo = true;
+
+        }
+            if (camposOK.correo == false) {
                 Swal.fire({
                     icon: 'error',
                     title: '¡Correo Erroneo!',
@@ -110,7 +120,7 @@ form.addEventListener('submit', (event) => {
              
         
         }
-
+    console.log(camposOK);
 });
 
 

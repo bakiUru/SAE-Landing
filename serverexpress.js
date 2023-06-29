@@ -43,7 +43,10 @@ app.get('/', (req,res )=>{
     res.sendFile('index.html');
     });
 
-
+app.get('/sendEmail', (req,res)=>{
+    console.log('Estoy enviando el MAil!!!');
+    res.sendFile('/template/preloaderEmail.html');
+})
 
 
 

@@ -99,7 +99,7 @@ h1 {
 .btn-floating{
   margin-bottom: 100px;
   transition: transform 1s ;
-  animation: reboteHome 0.8s;
+  animation: reboteHome 1.2s;
   animation-direction: alternate;
   animation-timing-function: cubic-bezier(0.5, 0.2, 1, 0.2);
   animation-iteration-count: infinite;

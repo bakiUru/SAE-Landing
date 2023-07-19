@@ -95,17 +95,18 @@ router.post("/sendEmail", async (req, res) => {
     transporterC.sendMail(mensajeCliente, function (error, info) {
       if (error) {
         console.log(error);
-        res.status(404).send("Hubieron Problemas");
+        res.status(404).send("Hubieron Problemas Enviando el Correo al Cliente");
       } else {
         transporterE.sendMail(mensajeEquipo, function (error, info) {
           if (error) {
             console.log(error);
-            res.status(404).send("Hubieron Problemas");
+            res.status(404).send("Hubieron Problemas Con el Envio al Equipo");
           } else {
             res.send({
               status: "success",
               data: "Mail enviado al equipo",
             });
+            
             console.log("Mensaje enviado Al Equipo", info.messageId);
           }
           transporterE.close();
@@ -113,40 +114,9 @@ router.post("/sendEmail", async (req, res) => {
         console.log("Mensaje enviado Al cliente", info.messageId);
         res.status(200);
       }
-    }); /*
-    transporterE.sendMail(mensajeEquipo, function (error) {
-      if (error) {
-        console.log(error);
-      } else {
-        res.send({
-          status: "success",
-          data: "Mail enviado al equipo",
-        });
-        console.log("Mensaje enviado Al Equipo");
-      }
-      transporterE.close();
-    });
-
-    console.log("Mensaje enviado Al cliente");
-    authMailClient()
-      .then((result) =>
-        result.use(
-          "compile",
-          handlebars({
-            viewEngine: {
-              extname: ".handlebars",
-              partialsDir: path.resolve("./assets/template"),
-              defaultLayout: false,
-            },
-            viewPath: path.resolve("./assets/template"),
-            extname: ".handlebars",
-          })
-        )
-      )
-      .then((result) => result.sendMail(mensajeCliente))
-      .then((result) => result.send("Mensaje Enviado al cliente"))
-      .catch((err) => console.log(err.message));
-        */
-  } else res.send("<h1>ERROR EN EL ENVIO CAMPOS VACIOS</h1>");
+      transporterC.close();
+    }); 
+  } 
+  else res.send("<h1>ERROR EN EL ENVIO CAMPOS VACIOS</h1>");
 });
 module.exports = router;

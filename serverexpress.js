@@ -45,7 +45,10 @@ app.get('/', (req,res )=>{
 
 app.get('/sendEmail', (req,res)=>{
     console.log('Estoy enviando el MAil!!!');
-    res.sendFile('/template/preloaderEmail.html');
+    setTimeout(()=>{
+
+        res.redirect('/');
+    },1000)
 })
 
 

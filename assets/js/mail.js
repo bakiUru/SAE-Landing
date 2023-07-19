@@ -143,7 +143,7 @@ const enviarMail = () => {
     setTimeout(()=>{
         $('.contenedor').fadeOut("slow");
         $("body").removeClass("hidden");
-        window.location = "/" ;
+        window.location = "/sendEmail" ;
 
     },2000)
 };
